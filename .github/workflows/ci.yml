@@ -6,7 +6,7 @@ name: CI
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
   push:
-    branches: [ "main" ]
+    types: [opened, synchronize, reopened]
   pull_request:
     types: [opened, synchronize, reopened]
 
@@ -37,6 +37,7 @@ jobs:
           
       - name: Run Custom Script
         run: |
+          echo "PR branch: ${{ github.head_ref }}"
           # 根據 PR 所屬分支決定成功或失敗
           if [ "${{ github.head_ref }}" == "hw1-f" ]; then
             echo "故意製造錯誤，讓測試失敗" && exit 1
