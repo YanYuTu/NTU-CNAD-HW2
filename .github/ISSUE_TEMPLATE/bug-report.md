@@ -2,16 +2,7 @@
 name: Bug Report
 about: 回報程式碼中的錯誤
 title: "[BUG]"
-labels: ''
-assignees: ''
-
----
-
----
-name: Bug Report
-about: 回報程式碼中的錯誤
-title: "[BUG]"
-labels: bug
+labels: 'bug'
 assignees: ''
 
 ---
